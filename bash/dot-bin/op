@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ $(uname) == Darwin ]]; then
+  open "$@"
+else
+  run-mailcap "$@" &> /dev/null
+fi

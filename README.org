@@ -1,0 +1,32 @@
+#+OPTIONS: toc:nil num:nil
+
+* A smart way of porting dotfiles!
+
+This repository is one smart way of porting dotfiles between machines,
+and keeping your configuration of Emacs version controlled. 
+ 
+** Credits 
+The content of this repository (and this file) is mostly based on [[https://github.com/hrs/dotfiles][Harry R. Schwartz's]]
+excellent configuration, adapted to my needs. Be prepared for that! 
+
+
+** Installation
+Clone this repository wherever you like (I use =~/.dotfiles=) and run the
+=install.sh= script. This will:
+
+- Install a bunch of Debian packages,
+- Set up a bunch of symlinks in your home directory to the content in
+  the dotfiles-folder (e.g., =~/.bashrc= →
+  =~/.dotfiles/bash/.bashrc=), and
+- Install a handful of required Ruby gems.
+
+I'm currently working on an Ubuntu 20.04 so my set-up might not work
+for you. 
+
+**** Wallpaper
+To ensure that wallpaper is set correctly, create a =~/.wallpaper-directory=
+symlink to the directory where you keep your wallpapers:
+
+#+begin_src
+$ ln -s /where/your/wallpapers/live ~/.wallpaper-directory
+#+end_src
